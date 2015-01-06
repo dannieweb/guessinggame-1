@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+  <body>
+  </body>
+<script>
+var guess,
+  answer,
+  clue1,
+  clueguess;
+
+guess = prompt("Let's play a guessing game! Guess a COLOUR");
+answer = "Red";
+
+if (guess == answer) {
+  prompt("Yes! That is correct!");
+
+} else {
+  clue1 = prompt("Would you like a clue?");
+
+  if (clue1 == "Yes") {
+  clueguess = prompt("Fire engine ____");
+
+  if (clueguess == answer) {
+  prompt("Yes! That is correct!");
+
+} else {
+  alert("Too bad. Goodbye!");
+}
+}
+}
+</script>
+</html>
