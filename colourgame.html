@@ -7,29 +7,40 @@
   </body>
 <script>
 var guess,
-  answer,
-  clue1,
-  clueguess;
+  	answer,
+  	response,
+  	color,
+  	number;
+
+number = Math.floor(Math.random() * 10);
+
+if (number < 3) {
+  color = "Red";
+
+} else if (number > 3 && number < 7) {
+  color = "Blue";
+
+} else if (number > 7) {
+  color = "Green";
+
+};
+
 
 guess = prompt("Let's play a guessing game! Guess a COLOUR");
-answer = "Red";
+answer = color;
 
 if (guess == answer) {
-  prompt("Yes! That is correct!");
+  alert("Yes! That is correct!");
 
 } else {
-  clue1 = prompt("Would you like a clue?");
+  response = prompt("Try Again!");
+};
 
-  if (clue1 == "Yes") {
-  clueguess = prompt("Fire engine ____");
-
-  if (clueguess == answer) {
+if (response == answer) {
   prompt("Yes! That is correct!");
 
 } else {
   alert("Too bad. Goodbye!");
-}
-}
-}
+};
 </script>
 </html>
